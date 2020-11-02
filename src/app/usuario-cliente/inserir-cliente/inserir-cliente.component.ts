@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Cliente} from '../../shared/model/cliente';
 import {CLIENTES} from '../../shared/model/CLIENTES';
+import {ClienteService} from '../../shared/services/cliente.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-inserir-cliente',
@@ -10,23 +12,39 @@ import {CLIENTES} from '../../shared/model/CLIENTES';
 export class InserirClienteComponent implements OnInit {
 
   cliente: Cliente;
-  clientes: Array<Cliente>;
 
+  operacaoCadastro = true;
 
-  constructor() {
+  constructor(private clienteService: ClienteService, private rotalAtual: ActivatedRoute, private roteador: Router) {
     this.cliente = new Cliente();
-    this.clientes = CLIENTES;
+    if (this.rotalAtual.snapshot.paramMap.has('id')) {
+      this.operacaoCadastro = false;
+      const idParaEdicao = Number(this.rotalAtual.snapshot.paramMap.get('id'));
+      // pegar do banco usuario id=idParaEdicao
+      this.clienteService.pesquisarPorId(idParaEdicao).subscribe(
+        clienteRetornado => this.cliente = clienteRetornado
+      );
+    }
   }
 
   ngOnInit(): void {
   }
   inserirCliente(): void{
-    this.clientes.push(this.cliente);
-    console.log(this.cliente);
-    console.log(this.clientes);
-    this.cliente = new Cliente();
+
+    if (this.cliente.id) {
+      this.clienteService.atualizar(this.cliente).subscribe(
+        clienteAlterado => {
+          console.log(clienteAlterado);
+          this.roteador.navigate(['listarcliente']);
+        }
+      );
+    } else {
+      this.clienteService.inserir(this.cliente).subscribe(
+        clienteInserido => {
+          console.log(clienteInserido);
+          this.roteador.navigate(['listarcliente']);
+        }
+      );
+    }
   }
-
-
-
 }

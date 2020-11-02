@@ -3,9 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import {InserirClienteComponent} from './usuario-cliente/inserir-cliente/inserir-cliente.component';
 import {ListarClienteComponent} from './usuario-cliente/listar-cliente/listar-cliente.component';
 
+
 const routes: Routes = [
   {
     path: 'inserircliente',
+    component: InserirClienteComponent
+  },
+  {
+    path: 'inserircliente/:id',
     component: InserirClienteComponent
   },
   {

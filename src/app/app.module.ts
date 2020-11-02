@@ -7,6 +7,7 @@ import {CalendarioModule} from './calendario/calendario.module';
 import {UsuarioClienteModule} from './usuario-cliente/usuario-cliente.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {LayoutModule} from './layout/layout.module';
     CalendarioModule,
     UsuarioClienteModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
