@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Cliente} from '../../shared/model/cliente';
-import {CLIENTES} from '../../shared/model/CLIENTES';
 import {ClienteService} from '../../shared/services/cliente.service';
 import {ActivatedRoute, Router} from '@angular/router';
 

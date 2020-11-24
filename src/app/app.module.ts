@@ -7,8 +7,9 @@ import {CalendarioModule} from './calendario/calendario.module';
 import {UsuarioClienteModule} from './usuario-cliente/usuario-cliente.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {UsuarioPrestadorModule} from "./usuario-prestador/usuario-prestador.module";
+import {HttpClientModule} from '@angular/common/http';
+import {UsuarioPrestadorModule} from './usuario-prestador/usuario-prestador.module';
+
 
 
 @NgModule({
