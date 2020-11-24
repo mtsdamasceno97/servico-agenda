@@ -1,7 +1,7 @@
-export class Cliente {
+export class Prestador {
   id: number;
   nome: string;
-  cpf: string;
+  cnpj: string;
   email: string;
   senha: string;
   telefone: number;

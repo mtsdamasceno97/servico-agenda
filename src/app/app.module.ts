@@ -8,6 +8,7 @@ import {UsuarioClienteModule} from './usuario-cliente/usuario-cliente.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {UsuarioPrestadorModule} from "./usuario-prestador/usuario-prestador.module";
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     CalendarioModule,
     UsuarioClienteModule,
+    UsuarioPrestadorModule,
     BrowserAnimationsModule,
     LayoutModule,
     HttpClientModule

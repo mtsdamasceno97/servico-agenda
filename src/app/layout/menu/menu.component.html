@@ -1,14 +1,29 @@
 
 <div class="menu-principal">
-<button mat-button [matMenuTriggerFor]="menu" class="menu-button">CLIENTE</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item [routerLink]="['/inserircliente']" >
-    <mat-icon>person</mat-icon>
-    Cadastrar Usuário
-  </button>
-  <button mat-menu-item [routerLink]="['/listarcliente']">
-    <mat-icon>person</mat-icon>
-    Listar Cliente
-  </button>
-</mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu" class="menu-button">CADASTRE-SE</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/inserircliente']" >
+      <mat-icon>person</mat-icon>
+      Cadastrar Usuário
+    </button>
+
+    <button mat-menu-item [routerLink]="['/inserirprestador']" >
+      <mat-icon>person</mat-icon>
+      Cadastrar Prestador
+    </button>
+
+    <button mat-menu-item [routerLink]="['/listarcliente']">
+      <mat-icon>person</mat-icon>
+      Listar Cliente
+    </button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu2" class="menu-button">SERVIÇOS</button>
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item [routerLink]="['/listarclientestabela']" >
+      <mat-icon>person</mat-icon>
+      Pesquisar serviço
+    </button>
+  </mat-menu>
+
 </div>

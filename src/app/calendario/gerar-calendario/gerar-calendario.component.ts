@@ -15,8 +15,8 @@ export class GerarCalendarioComponent implements OnInit {
     initialView: 'dayGridMonth',
     dateClick: this.handleDateClick.bind(this), // bind is important!
     events: [
-      { title: 'Barbearia', date: '2020-10-11' },
-      { title: 'Consulta Dentista', date: '2020-10-15',  }
+      { title: 'Horário disponivel', date: '2020-11-25' },
+      { title: 'Reservado', date: '2020-11-24' }
     ]
   };
 
