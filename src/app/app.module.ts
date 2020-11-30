@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
 import {HttpClientModule} from '@angular/common/http';
 import {UsuarioPrestadorModule} from './usuario-prestador/usuario-prestador.module';
-
+import { FirestoreModule } from './firestore/firestore.module';
 
 
 @NgModule({
@@ -17,14 +17,15 @@ import {UsuarioPrestadorModule} from './usuario-prestador/usuario-prestador.modu
     AppComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     CalendarioModule,
     UsuarioClienteModule,
     UsuarioPrestadorModule,
     BrowserAnimationsModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
