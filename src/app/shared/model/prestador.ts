@@ -4,5 +4,5 @@ export class Prestador {
   cnpj: string;
   email: string;
   senha: string;
-  telefone: number;
+  telefone: string;
 }

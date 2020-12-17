@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Cliente} from '../../shared/model/cliente';
 import {ClienteFirestoreService} from '../../shared/services/cliente-firestore.service';
 import {Router} from '@angular/router';
+import {ClienteService} from '../../shared/services/cliente.service';
 
 
 @Component({
@@ -14,11 +15,11 @@ export class ListarClienteComponent implements OnInit {
   clientes: Array<Cliente>;
 
   // para injetar o serviço, inicia ele dentro do parâmetro do construtor
-  constructor(private clienteFirestoreService: ClienteFirestoreService, private roteador: Router) {
+  constructor(private clienteService: ClienteService, private roteador: Router) {
   }
 
   ngOnInit(): void {
-    this.clienteFirestoreService.listar().subscribe(
+    this.clienteService.listar().subscribe(
       clientes => this.clientes = clientes
     );
   }
@@ -28,7 +29,7 @@ export class ListarClienteComponent implements OnInit {
   }
 
   remover(cliente: Cliente): void {
-    this.clienteFirestoreService.remover(cliente.id).subscribe(
+    this.clienteService.remover(cliente.id).subscribe(
       resposta => {
         const indxUsuarioARemover = this.clientes.findIndex(u => u.cpf === cliente.cpf);
         if (indxUsuarioARemover > -1) {

@@ -1,15 +1,13 @@
-
+<div class="menu-completo">
 <div class="menu-principal">
+
+  <button mat-button  class="menu-button" [routerLink]="['']" >HOME</button>
+
   <button mat-button [matMenuTriggerFor]="menu" class="menu-button">CADASTRE-SE</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item [routerLink]="['/inserircliente']" >
       <mat-icon>person</mat-icon>
-      Cadastrar Usuário
-    </button>
-
-    <button mat-menu-item [routerLink]="['/inserirprestador']" >
-      <mat-icon>person</mat-icon>
-      Cadastrar Prestador
+      Cadastrar Cliente
     </button>
 
     <button mat-menu-item [routerLink]="['/listarcliente']">
@@ -26,4 +24,5 @@
     </button>
   </mat-menu>
 
+</div>
 </div>

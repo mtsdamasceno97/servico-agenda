@@ -8,24 +8,37 @@ import {UsuarioClienteModule} from './usuario-cliente/usuario-cliente.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
 import {HttpClientModule} from '@angular/common/http';
-import {UsuarioPrestadorModule} from './usuario-prestador/usuario-prestador.module';
 import { FirestoreModule } from './firestore/firestore.module';
+import {RouterModule} from '@angular/router';
+import {MatIconModule} from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {UsuarioPrestadorModule} from './usuario-prestador/usuario-prestador.module';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
-  BrowserModule,
+    UsuarioPrestadorModule,
+    BrowserModule,
     AppRoutingModule,
     CalendarioModule,
     UsuarioClienteModule,
-    UsuarioPrestadorModule,
     BrowserAnimationsModule,
     LayoutModule,
     HttpClientModule,
-    FirestoreModule
+    FirestoreModule,
+    RouterModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

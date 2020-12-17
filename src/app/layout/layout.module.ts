@@ -4,14 +4,16 @@ import { MenuComponent } from './menu/menu.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {RouterModule} from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 
 @NgModule({
-  declarations: [MenuComponent],
+  declarations: [MenuComponent, FooterComponent],
   exports: [
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

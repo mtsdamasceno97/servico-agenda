@@ -3,6 +3,9 @@ import {Cliente} from '../../shared/model/cliente';
 import {ClienteFirestoreService} from '../../shared/services/cliente-firestore.service';
 import {MatTableDataSource} from '@angular/material/table';
 import {Router} from '@angular/router';
+import {ServicoService} from "../../shared/services/servico.service";
+import {Prestador} from "../../shared/model/prestador";
+import {Servico} from "../../shared/model/servico";
 
 
 @Component({
@@ -12,15 +15,15 @@ import {Router} from '@angular/router';
 })
 export class ListarClienteTabelaComponent implements OnInit {
 
-  dataSource: MatTableDataSource<Cliente>;
-  mostrarColunas = ['nome', 'cpf', 'email', 'acoes'];
+  dataSource: MatTableDataSource<Servico>;
+  mostrarColunas = ['Id', 'Tipo', 'Prestador', 'Agendar'];
 
-  constructor(private clienteFirestoreService: ClienteFirestoreService, private roteador: Router) {
+  constructor(private servicoService: ServicoService, private roteador: Router) {
   }
 
   ngOnInit(): void {
-    this.clienteFirestoreService.listar().subscribe(
-      clientes => this.dataSource = new MatTableDataSource(clientes)
+    this.servicoService.listar().subscribe(
+      servicos => this.dataSource = new MatTableDataSource(servicos)
     );
   }
 
@@ -29,6 +32,5 @@ export class ListarClienteTabelaComponent implements OnInit {
   }
 
   agendar(): void {
-    this.roteador.navigate(['agendarservico']);
   }
 }

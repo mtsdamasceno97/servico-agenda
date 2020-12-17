@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee");
+
+
+.tela-inicial h1 {
+    color: black;
+    margin-top:20px;
+    text-align: center;
+    font-family: "Bungee", sans-serif;
+
+  }
+
+.tela-inicial img{
+  margin-left: 450px;
+  max-width:500px;
+  max-height:450px;
+}
+
+.tela-botoes{
+  padding: 28px 440px;
+}
+
+.tela-botoes .btn1{
+  width: 200px;
+  padding: 15px 20px;
+  border: 2px solid #6d4cff;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 15px;
+  font-family: "Bungee", sans-serif;
+}
+
+.tela-botoes .btn2{
+  width: 250px;
+  margin-left: 10px;
+  padding: 15px 20px;
+  border: 2px solid #6d4cff;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 15px;
+  font-family: "Bungee", sans-serif;
+}
+
+

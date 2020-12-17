@@ -16,7 +16,8 @@ export class GerarCalendarioComponent implements OnInit {
     dateClick: this.handleDateClick.bind(this), // bind is important!
     events: [
       { title: 'Horário disponivel', date: '2020-11-25' },
-      { title: 'Reservado', date: '2020-11-24' }
+      { title: 'Reservado', date: '2020-11-24' },
+      { title: 'Barbearia - 14:00 horas', date: '2020-12-18'}
     ]
   };
 

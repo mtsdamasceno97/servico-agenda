@@ -4,7 +4,7 @@ export class Cliente {
   cpf?: string;
   email?: string;
   senha?: string;
-  telefone?: number;
+  telefone?: string;
 
 
   constructor(id?: string, cliente: Cliente = {}) {

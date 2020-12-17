@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
+import {CalendarioModule} from "../calendario/calendario.module";
 
 
 @NgModule({
@@ -19,15 +20,16 @@ import {MatTableModule} from '@angular/material/table';
     ListarClienteComponent,
     ListarClienteTabelaComponent
   ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatTableModule
-  ]
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatInputModule,
+        MatTableModule,
+        CalendarioModule
+    ]
 })
 export class UsuarioClienteModule { }

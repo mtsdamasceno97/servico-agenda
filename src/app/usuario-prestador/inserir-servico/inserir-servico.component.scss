@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee");
+
 .card-principal{
   width: 350px;
   margin-left: 35%;
@@ -25,4 +27,12 @@
 
 .cardInserirCliente{
   background-color: white;
+}
+
+.cardInserirCliente h2 {
+  color: black;
+  margin-top:20px;
+  text-align: center;
+  font-family: "Bungee", sans-serif;
+
 }

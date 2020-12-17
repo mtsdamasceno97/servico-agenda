@@ -9,7 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class ClienteService {
 
-  URL_CLIENTES = 'http://localhost:3000/clientes';
+  URL_CLIENTES = 'http://localhost:8080/clientes';
 
   constructor(private httpClient: HttpClient) {
 
@@ -23,11 +23,11 @@ export class ClienteService {
     return this.httpClient.post<Cliente>(this.URL_CLIENTES, cliente);
   }
 
-  remover(id: number): Observable<object> {
+  remover(id: string): Observable<object> {
     return this.httpClient.delete(`${this.URL_CLIENTES}/${id}`);
   }
 
-  pesquisarPorId(id: number): Observable<Cliente> {
+  pesquisarPorId(id: string): Observable<Cliente> {
     return this.httpClient.get<Cliente>(`${this.URL_CLIENTES}/${id}`);
   }
 
